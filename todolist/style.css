@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.todotitle {
+    font-size: 100px;
+    color:rosybrown
+}
+
+.todoinputbox{
+    margin: 0;
+    width: 400px;
+}
+
+.todoinputbox input:focus{
+    outline: none;
+}
+.todo-input{
+    border: solid #c09191 10px;
+    width: 300px;
+    height: 38px;
+}
+.check {
+    text-decoration: line-through;
+}
+
