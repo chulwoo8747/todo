@@ -4,7 +4,7 @@ let input = document.querySelector(".todo-input");
 const add = document.querySelector(".body");
 const enterBtn = document.querySelector(".complete-all-btn");
 
-console.log(enterBtn)
+
 
 enterBtn.addEventListener("click", () => {
     const div = document.createElement("div");
@@ -33,29 +33,29 @@ enterBtn.addEventListener("click", () => {
         addDiv.remove();
         del.remove();
         container.remove();
-        tnwjd.remove();
+        modify.remove();
     })
 
-    const tnwjd = document.createElement("button");
-    tnwjd.innerText = "수정";
-    div.appendChild(tnwjd);
+    const modify = document.createElement("button");
+    modify.innerText = "수정";
+    div.appendChild(modify);
 
-    tnwjd.addEventListener("click", () => {
+    modify.addEventListener("click", () => {
         // addDiv.remove();
-        const qjxms = document.createElement("input");
+        const confirmBtn = document.createElement("input");
         const editBtn = document.createElement("button");
-        div.appendChild(qjxms);
+        div.appendChild(confirmBtn);
         div.appendChild(editBtn);
         editBtn.innerText = "확인";
-        tnwjd.remove();   
+        modify.remove();   
         
         editBtn.addEventListener("click", () => {
             
-            addDiv.innerText = qjxms.value;
-            qjxms.remove();
+            addDiv.innerText = confirmBtn.value;
+            confirmBtn.remove();
             editBtn.remove();
-            tnwjd.innerText = "수정";
-            div.appendChild(tnwjd);
+            modify.innerText = "수정";
+            div.appendChild(modify);
         });
     })
 })
